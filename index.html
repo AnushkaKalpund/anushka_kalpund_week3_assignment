@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoBazaar Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Menu -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">TechnoBazaar</a>
+        </div>
+       
+        <div class="cart-login">
+            <a href="#" class="cart-icon">🛒 Check your Cart <span id="cart-count">0</span></a>
+            <a href="login.html" class="login-icon">👤 Login</a>
+            <a href="register.html" class="login-icon">👤 Register</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+</div>
+
+<!-- Main Content: Product Page -->
+<main class="product-container">
+    <div class="product-gallery">
+        <div class="main-image-container">
+            <img id="main-product-image" src="product1.jpg" alt="Product Image">
+        </div>
+        <div class="thumbnails">
+            <img src="product1.jpg" alt="Thumbnail 1" onclick="changeImage(this)" data-title="CAMERA" data-price="49.99" data-description="High-quality CAMERA">
+            <img src="product2.jpg" alt="Thumbnail 2" onclick="changeImage(this)" data-title="SCREEN CLEANER" data-price="59.99" data-description="High-quality SCREEN CLEANER">
+            <img src="product3.jpg" alt="Thumbnail 3" onclick="changeImage(this)" data-title="LAPTOP" data-price="69.99" data-description="High-quality LAPTOP">
+            <img src="product4.jpg" alt="Thumbnail 4" onclick="changeImage(this)" data-title="MOUSE" data-price="79.99" data-description="High-quality MOUSE">
+            <img src="product5.jpg" alt="Thumbnail 5" onclick="changeImage(this)" data-title="HEADPHONES" data-price="89.99" data-description="High-quality HEADPHONES">
+        </div>
+    </div>
+
+    <div class="product-details">
+        <h2 id="product-title">NextGenElectronics</h2>
+        <div class="rating">
+            ⭐⭐⭐⭐⭐ <span>(120 reviews)</span>
+        </div>
+        <p class="price" id="product-price">$49.99</p>
+        <p class="description" id="product-description">This is a high-quality product. Perfect for daily use, made from premium materials.</p>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10">
+
+        <button id="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 TechnoBazaar Store by Anushka. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
